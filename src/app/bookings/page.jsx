@@ -16,7 +16,7 @@ const user = session.user;
 // console.log(user);
 
 // api call for get data 
-const res=await fetch(`http://localhost:5000/bookings/${user?.id}`)
+const res=await fetch(`${process.env.NEXT_PUBLIC_URL}/bookings/${user?.id}`)
 const bookings=await res.json()
 console.log('data of bookings persons',bookings)
 

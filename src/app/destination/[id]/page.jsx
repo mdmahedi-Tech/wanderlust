@@ -8,7 +8,7 @@ import Image from "next/image";
 const DestinationDetailspage = async({params}) => {
     const {id}=await params;
     // console.log(id,'id of params')
-    const res=await fetch(`http://localhost:5000/destination/${id}`);
+    const res=await fetch(`${process.env.NEXT-PUBLIC_UR}/destination/${id}`);
     const details=await res.json();
     // console.log(details)
     // console.log(id)
